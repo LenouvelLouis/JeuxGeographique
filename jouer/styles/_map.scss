@@ -1,0 +1,218 @@
+.jeuContainer {
+  width: 70%;
+  margin: 30px auto;
+  padding: 40px 60px;
+  border: 1px solid black;
+  border-radius: 30px;
+  position: relative;
+  border: none;
+  box-shadow: 0px 0px 22px 8px $color2;
+  @media screen and (max-width: 730px) {
+    padding: 25px;
+  }
+  #title {
+    text-align: center;
+    color: $color2;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    @media screen and (max-width: 1000px) {
+      font-size: 1.5rem;
+    }
+    @media screen and (max-width: 780px) {
+      font-size: 1.2rem;
+    }
+  }
+  .infosParties {
+    display: flex;
+    position: relative;
+    color: $color2;
+    #nomVille {
+      margin-left: 20px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    #points {
+      position: absolute;
+      right: 0;
+    }
+  }
+  #containerProgressBar {
+    display: none;
+    background: white;
+    width: 100%;
+    height: 30px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 83px 8px rgba(0, 0, 0, 1);
+    #progressBar {
+      border-radius: 30px;
+      width: 100%;
+      height: 100%;
+      background: rgb(247, 0, 0);
+      background: linear-gradient(
+        90deg,
+        rgba(247, 0, 0, 1) 18%,
+        rgba(210, 98, 0, 1) 34%,
+        rgba(238, 251, 21, 1) 70%,
+        rgba(0, 255, 4, 1) 100%
+      );
+    }
+  }
+  #map {
+    position: relative;
+    height: 80%;
+    z-index: 1;
+    margin: auto auto;
+    border-radius: 30px;
+    background: $color2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 22px 8px #673ab7;
+    @media screen and (max-width: 780px) {
+      height: 50%;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 70%;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+    }
+    #accueilJeu {
+      width: 60%;
+      margin: 0 auto;
+      color: $color1;
+      h2 {
+        text-align: center;
+        @media screen and (max-width: 780px) {
+          font-size: 1rem;
+        }
+      }
+      h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 700;
+        @media screen and (max-width: 780px) {
+          font-size: 2rem;
+        }
+      }
+      p {
+        padding: 80px 0 30px;
+        text-align: center;
+        font-size: 1.4rem;
+        @media screen and (max-width: 780px) {
+          padding: 30px 10px;
+          font-size: 0.9rem;
+        }
+      }
+      button {
+        cursor: pointer;
+        color: $color2;
+        background: rgb(255, 224, 54);
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        transition: 0.4s ease-in-out;
+        &:hover {
+          transform: scale(1.05);
+          background: rgb(248, 236, 165);
+        }
+      }
+      #lancerAvecChrono {
+        padding: 10px 80px;
+        font-size: 2.4rem;
+        font-weight: 800;
+        border-radius: 60px;
+        border: none;
+        @media screen and (max-width: 730px) {
+          padding: 8px 60px;
+          font-size: 1.7rem;
+        }
+      }
+      #lancerSansChrono,
+      #seConnecter {
+        padding: 10px 30px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        border-radius: 60px;
+        border: none;
+        @media screen and (max-width: 730px) {
+          padding: 7px 20px;
+          font-size: 1rem;
+        }
+      }
+    }
+    span {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: none;
+      z-index: 2000;
+      font-size: 2.4rem;
+      padding: 10px;
+      color: $color2;
+      cursor: pointer;
+      transition: 0.4s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    #popup {
+      position: absolute !important;
+      display: none;
+      text-align: center;
+      text-transform: uppercase;
+      background: gray;
+      padding: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40%;
+      z-index: 100000;
+      transition: 2s ease-in-out;
+      border-radius: 25px;
+      letter-spacing: 2px;
+      color: $color1;
+      background: $color2;
+      h1,
+      h2 {
+        @media screen and (max-width: 780px) {
+          font-size: 0.8rem;
+        }
+      }
+      img {
+        height: 90%;
+        width: 90%;
+        padding: 10px;
+      }
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        color: $color2;
+        background: $color1;
+        font-size: 1.5rem;
+        font-weight: 700;
+        transition: 0.4s ease-in-out;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.05);
+        }
+        @media screen and (max-width: 780px) {
+          font-size: 1rem;
+          font-weight: 600;
+          margin: 5px;
+          padding: 5px 10;
+        }
+      }
+    }
+  }
+}

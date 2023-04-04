@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "InterM";
+  src: url(../../fonts/Inter-Medium.ttf);
+}
+$font1: "InterM", serif;
+$color1: wheat;
+$color2: rgb(159, 43, 161);
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $font1;
+  //   font-size: 62, 5%; //test
+}
+
+li,
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  background: $color1;
+}
